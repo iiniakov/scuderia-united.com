@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuickWOD Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for QuickWOD, a local-first workout tracking app." />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f4ed;
+        --text: #171717;
+        --muted: #60646c;
+        --line: #d9d2c5;
+        --panel: #ffffff;
+        --accent: #0f766e;
+        --ink: #111827;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .shell {
+        width: min(880px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 28px 0;
+        border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mark {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 16px;
+      }
+
+      nav {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      main {
+        padding: 64px 0;
+      }
+
+      .document {
+        padding: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      .updated {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(36px, 7vw, 58px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 21px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 22px;
+      }
+
+      footer {
+        padding: 0 0 46px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 720px) {
+        .nav,
+        nav {
+          display: block;
+        }
+
+        nav {
+          margin-top: 18px;
+        }
+
+        nav a {
+          display: inline-block;
+          margin: 0 14px 10px 0;
+        }
+
+        .document {
+          padding: 28px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="/quickwod/info.html">
+          <span class="mark">QW</span>
+          <span>QuickWOD</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="/quickwod/info.html">Info</a>
+          <a href="/quickwod/policy.html">Privacy Policy</a>
+          <a href="/quickwod/terms.html">Terms of Service</a>
+          <a href="mailto:support@scuderia-united.com">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <article class="document">
+        <p class="updated">Last updated: May 1, 2026</p>
+        <h1>Privacy Policy</h1>
+
+        <h2>Overview</h2>
+        <p>
+          QuickWOD is a local-first workout tracking app. Your data stays on your device. We do
+          not operate servers that store your personal workout history.
+        </p>
+
+        <h2>Data We Collect</h2>
+        <p>QuickWOD stores the following data locally on your device:</p>
+        <ul>
+          <li>Workout logs, including exercise, date, result values, and notes</li>
+          <li>Custom exercises you create</li>
+          <li>App settings, including language, units, and theme</li>
+          <li>Profile name and avatar photo</li>
+          <li>Entry photos you attach to workout logs</li>
+        </ul>
+        <p>
+          All of this data is stored in an SQLite database and your device's local file system. It
+          never leaves your device unless you explicitly use the Export or Backup features.
+        </p>
+
+        <h2>Photos</h2>
+        <p>
+          Photos you attach to workout entries are copied to a private app directory on your
+          device. They are not uploaded anywhere. If you export or share a backup, photo file paths
+          may be included in the export data, but the image files themselves are not attached.
+        </p>
+
+        <h2>Subscriptions</h2>
+        <p>
+          QuickWOD uses RevenueCat to manage in-app subscriptions. When you purchase a subscription
+          or restore purchases, RevenueCat processes the transaction through the App Store or Google
+          Play. RevenueCat's privacy policy governs data collected during that process. We do not
+          receive your payment details.
+        </p>
+
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li>RevenueCat for subscription management, purchases only</li>
+          <li>Apple App Store and Google Play for payment processing</li>
+        </ul>
+        <p>No analytics, advertising, or crash reporting SDKs are included in this version of the app.</p>
+
+        <h2>Data Sharing</h2>
+        <p>
+          We do not sell, rent, or share your personal data with third parties for marketing
+          purposes. Workout data is shared only when you explicitly tap Export Data or Backup and
+          choose a destination through your device's share sheet.
+        </p>
+
+        <h2>Data Retention</h2>
+        <p>
+          All data is retained on your device until you choose to delete it. You can remove
+          individual entries at any time. You can erase all workout history via Profile &gt; Data
+          &gt; Clear History. Uninstalling the app permanently removes all locally stored data.
+        </p>
+
+        <h2>Your Rights</h2>
+        <p>You have full control over the data QuickWOD stores:</p>
+        <ul>
+          <li>Access: all your data is visible inside the app at any time.</li>
+          <li>Portability: use Profile &gt; Data &gt; Export Data to download a copy of your workout history in CSV or JSON format.</li>
+          <li>Deletion: use Profile &gt; Data &gt; Clear History to erase all entries, or uninstall the app to remove all data from your device.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>
+          QuickWOD is not directed at children under 13. We do not knowingly collect personal
+          information from children under 13. If you believe a child under 13 has used the app,
+          please contact us and we will assist with data removal.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          We may update this policy as the app evolves. The date at the top of this page reflects
+          the most recent revision.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions or concerns? Contact us at
+          <a href="mailto:support@scuderia-united.com">support@scuderia-united.com</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="shell">Copyright 2026 Scuderia United.</div>
+    </footer>
+  </body>
+</html>
