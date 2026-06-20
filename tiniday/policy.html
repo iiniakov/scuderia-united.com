@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TiniDay: Baby Tracker Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for TiniDay: Baby Tracker." />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8f4ef;
+        --text: #181716;
+        --muted: #65605c;
+        --line: #ded4c8;
+        --accent: #be6f59;
+        --ink: #172033;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .shell {
+        width: min(880px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 28px 0;
+        border-bottom: 1px solid rgba(24, 23, 22, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mark {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 15px;
+      }
+
+      nav {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      main {
+        padding: 64px 0;
+      }
+
+      .document {
+        padding: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      .updated {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(36px, 7vw, 58px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 21px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 22px;
+      }
+
+      footer {
+        padding: 0 0 46px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 720px) {
+        .nav,
+        nav {
+          display: block;
+        }
+
+        nav {
+          margin-top: 18px;
+        }
+
+        nav a {
+          display: inline-block;
+          margin: 0 14px 10px 0;
+        }
+
+        .document {
+          padding: 28px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="/tiniday/info.html">
+          <span class="mark">TD</span>
+          <span>TiniDay: Baby Tracker</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="/tiniday/info.html">Info</a>
+          <a href="/tiniday/policy.html">Privacy Policy</a>
+          <a href="/tiniday/terms.html">Terms of Service</a>
+          <a href="mailto:support@scuderia-united.com">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <article class="document">
+        <p class="updated">Last updated: June 20, 2026</p>
+        <h1>Privacy Policy</h1>
+
+        <h2>Overview</h2>
+        <p>
+          TiniDay: Baby Tracker is a family diary and baby or toddler tracking app. Because the
+          app can store child-related information, privacy and access control are core parts of the
+          product. This policy explains what data may be collected, how it is used, and how you can
+          delete it.
+        </p>
+
+        <h2>Data We Collect</h2>
+        <p>TiniDay may collect and store the following information when you choose to use the app:</p>
+        <ul>
+          <li>Account information, such as email address and authentication identifiers</li>
+          <li>Child profile information, such as name, birth date, optional gender, theme, and avatar path</li>
+          <li>Household, caregiver, invite, role, and membership information</li>
+          <li>Sleep, feeding, food, diaper, medicine, appointment, milestone, note, and photo event records</li>
+          <li>Event times, notes, structured event details, reminders, and reminder status</li>
+          <li>Photos and other attachments you add to events</li>
+          <li>Short voice clips and transcripts when you use voice logging</li>
+          <li>AI import text, parsed preview data, confirmation status, and usage counters</li>
+          <li>Doctor summary and weekly insight requests and generated results</li>
+          <li>Subscription entitlement status and product identifiers</li>
+          <li>Crash, performance, and product interaction events if monitoring is enabled</li>
+        </ul>
+
+        <h2>How Data Is Stored</h2>
+        <p>
+          TiniDay uses Supabase for authentication, database storage, private file storage, and
+          backend functions. Access is protected with account authentication and Row Level Security
+          so users can access only households where they are members.
+        </p>
+        <p>
+          Photos and voice uploads are stored in private storage buckets. Public file access is not
+          enabled by default. Files are accessed only through authenticated app flows or temporary
+          signed access where needed.
+        </p>
+
+        <h2>AI-Assisted Logging and Summaries</h2>
+        <p>
+          TiniDay can parse text or a short voice transcript into structured event suggestions.
+          AI-assisted parsing is used only to organize the information you provide. Suggested
+          events are shown in an editable preview before they are saved. Medicine entries require
+          explicit confirmation.
+        </p>
+        <p>
+          Doctor summaries and weekly insights are generated from the events you recorded for the
+          selected period. They are non-diagnostic and are not a replacement for professional
+          medical advice.
+        </p>
+        <p>
+          AI requests are sent from backend functions rather than directly from the mobile app. We
+          aim to send only the content needed for the requested AI feature.
+        </p>
+
+        <h2>Voice Logging</h2>
+        <p>
+          If you use voice logging, a short audio clip is uploaded to private storage for
+          transcription. After transcription, the app uses the transcript to create an editable
+          preview. Temporary voice uploads are deleted by the app flow after transcription when
+          possible.
+        </p>
+
+        <h2>Subscriptions</h2>
+        <p>
+          TiniDay uses RevenueCat to manage in-app subscriptions and purchases. When you purchase
+          or restore Premium access, RevenueCat processes subscription status through the App Store
+          or Google Play. RevenueCat's privacy policy governs data collected during that process.
+          We do not receive your payment card details.
+        </p>
+
+        <h2>Notifications</h2>
+        <p>
+          TiniDay uses notifications for reminders such as medicine, appointments, and routines.
+          Notification permission is optional and can be changed in your device settings.
+        </p>
+
+        <h2>Monitoring and Analytics</h2>
+        <p>
+          TiniDay may use Sentry for crash reporting and PostHog or a similar analytics provider
+          for product analytics. These tools help us understand crashes, errors, and core app
+          flows. They are not used for third-party advertising.
+        </p>
+
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li>Supabase for authentication, database, private storage, and backend functions</li>
+          <li>Anthropic Claude for AI-assisted text parsing and summaries</li>
+          <li>OpenAI for voice transcription</li>
+          <li>RevenueCat for subscription management</li>
+          <li>Apple App Store and Google Play for payment processing</li>
+          <li>Sentry for crash reporting, if enabled</li>
+          <li>PostHog or similar product analytics tooling, if enabled</li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>
+          We do not sell, rent, or share personal data with third parties for marketing purposes.
+          Family and child data is shared only with household members or caregivers you invite, with
+          service providers that process data on our behalf, when you explicitly export or share
+          information, or when required by law.
+        </p>
+
+        <h2>Data Deletion</h2>
+        <p>
+          TiniDay provides in-app options to delete child data and to delete your account. Child
+          data deletion removes the selected child profile and related events, reminders, AI import
+          records, attachments, and private uploads. Account deletion removes your account access
+          and owned household data where applicable.
+        </p>
+        <p>
+          You may also contact
+          <a href="mailto:support@scuderia-united.com">support@scuderia-united.com</a> to request
+          help with deletion.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          TiniDay is intended for parents and caregivers. Children are not expected to create
+          accounts or use the app directly. Parents and caregivers are responsible for the
+          child-related information they choose to enter.
+        </p>
+
+        <h2>Security</h2>
+        <p>
+          We use account authentication, Row Level Security, private storage, and encrypted network
+          connections where supported by our service providers. No system can be guaranteed to be
+          perfectly secure, but we design TiniDay to limit access to the households and caregivers
+          you authorize.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          We may update this policy as the app evolves. The date at the top of this page reflects
+          the most recent revision.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions or concerns? Contact us at
+          <a href="mailto:support@scuderia-united.com">support@scuderia-united.com</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="shell">Copyright 2026 Scuderia United.</div>
+    </footer>
+  </body>
+</html>
