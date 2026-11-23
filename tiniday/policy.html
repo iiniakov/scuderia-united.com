@@ -166,7 +166,7 @@
 
     <main class="shell">
       <article class="document">
-        <p class="updated">Last updated: June 20, 2026</p>
+        <p class="updated">Last updated: November 23, 2026</p>
         <h1>Privacy Policy</h1>
 
         <h2>Overview</h2>
@@ -218,8 +218,16 @@
           medical advice.
         </p>
         <p>
+          With Premium, you can ask questions about your child's diary (Ask AI). Your question and
+          the diary entries that match it are sent to the AI provider to write a short answer.
+          Questions and answers are stored in your family's account so you can see them again, and
+          are deleted with the child's data or your account. Answers are based only on what you
+          recorded and are not medical advice.
+        </p>
+        <p>
           AI requests are sent from backend functions rather than directly from the mobile app. We
-          aim to send only the content needed for the requested AI feature.
+          aim to send only the content needed for the requested AI feature. The app asks for your
+          permission before the first AI request.
         </p>
 
         <h2>Voice Logging</h2>
@@ -240,8 +248,12 @@
 
         <h2>Notifications</h2>
         <p>
-          TiniDay uses notifications for reminders such as medicine, appointments, and routines.
-          Notification permission is optional and can be changed in your device settings.
+          TiniDay uses notifications for reminders such as medicine schedules and appointments.
+          When you allow notifications, the app stores a push token for your device with your
+          account so that reminders can reach every caregiver in your family. Reminders are
+          delivered through the Expo push service and the Apple Push Notification service. The
+          token is removed when you sign out. Notification permission is optional and can be
+          changed in your device settings.
         </p>
 
         <h2>Monitoring and Analytics</h2>
@@ -254,9 +266,11 @@
         <h2>Third-Party Services</h2>
         <ul>
           <li>Supabase for authentication, database, private storage, and backend functions</li>
-          <li>Anthropic Claude for AI-assisted text parsing and summaries</li>
+          <li>Anthropic Claude for AI-assisted text parsing, summaries and Ask AI answers</li>
           <li>OpenAI for voice transcription</li>
           <li>RevenueCat for subscription management</li>
+          <li>Expo push service and Apple Push Notification service for reminder notifications</li>
+          <li>Resend for account emails such as sign-up confirmation</li>
           <li>Apple App Store and Google Play for payment processing</li>
           <li>Sentry for crash reporting, if enabled</li>
           <li>PostHog or similar product analytics tooling, if enabled</li>
