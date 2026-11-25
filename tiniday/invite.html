@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <title>TiniDay: family invite</title>
+    <!--
+      With TiniDay installed, iOS opens this link in the app (universal link, see
+      /.well-known/apple-app-site-association) and this page is never shown. Without the app it
+      explains how to install it and join, and shows the invite code. The code never leaves the
+      browser: the page only reads it from the address.
+    -->
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8f4ef;
+        --text: #181716;
+        --muted: #65605c;
+        --line: #ded4c8;
+        --panel: #ffffff;
+        --ink: #172033;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #15171c;
+          --text: #f3efe9;
+          --muted: #b3aca4;
+          --line: #343843;
+          --panel: #1e2128;
+          --ink: #f3efe9;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, rgba(190, 111, 89, 0.14), rgba(248, 244, 239, 0) 360px), var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      main { max-width: 520px; margin: 0 auto; padding: 48px 20px 64px; }
+      .mark {
+        display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+        background: #be6f59; color: #fff; font-weight: 800;
+      }
+      h1 { font-size: 30px; line-height: 1.15; margin: 20px 0 8px; }
+      .lead { color: var(--muted); margin: 0 0 28px; }
+      ol { padding-left: 22px; margin: 0 0 28px; }
+      li { margin-bottom: 10px; }
+      .button {
+        display: flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 18px;
+        border: 1px solid var(--ink); border-radius: 8px; background: var(--ink); color: var(--bg);
+        font-weight: 750; text-decoration: none; margin-bottom: 12px;
+      }
+      .button.secondary { background: transparent; color: var(--ink); }
+      .code {
+        border: 1px solid var(--line); border-radius: 8px; background: var(--panel); padding: 14px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; word-break: break-all;
+        user-select: all; -webkit-user-select: all; margin: 8px 0 28px;
+      }
+      .muted { color: var(--muted); font-size: 14px; }
+      [hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="mark">TD</span>
+      <h1 data-i18n="title">You're invited to a family on TiniDay</h1>
+      <p class="lead" data-i18n="lead">TiniDay is a shared baby diary. Join to see and add the child's day together.</p>
+
+      <ol>
+        <li data-i18n="step1">Install TiniDay from the App Store.</li>
+        <li data-i18n="step2">Open it and sign in or create an account.</li>
+        <li data-i18n="step3">Tap the invite link again, or go to Profile → Join a family and paste the code below.</li>
+      </ol>
+
+      <a class="button" href="https://apps.apple.com/app/id6780487819" data-i18n="install">Download on the App Store</a>
+      <a class="button secondary" id="open-app" href="tiniday://accept-invite" data-i18n="open">I already have TiniDay — open the invite</a>
+
+      <div id="code-block" hidden>
+        <p class="muted" data-i18n="codeLabel">Invite code</p>
+        <div class="code" id="code"></div>
+      </div>
+      <p id="no-code" class="muted" hidden data-i18n="noCode">This link has no invite code. Ask the person who invited you to send the invite again.</p>
+    </main>
+
+    <script>
+      (function () {
+        var texts = {
+          ru: {
+            title: 'Вас пригласили в семью в TiniDay',
+            lead: 'TiniDay — общий дневник малыша. Вступите, чтобы вместе видеть и записывать день ребёнка.',
+            step1: 'Установите TiniDay из App Store.',
+            step2: 'Откройте приложение и войдите или создайте аккаунт.',
+            step3: 'Снова нажмите на ссылку-приглашение или откройте Профиль → «Вступить в семью» и вставьте код ниже.',
+            install: 'Загрузить в App Store',
+            open: 'TiniDay уже установлен — открыть приглашение',
+            codeLabel: 'Код приглашения',
+            noCode: 'В ссылке нет кода приглашения. Попросите пригласившего отправить приглашение ещё раз.',
+          },
+          uk: {
+            title: 'Вас запросили до родини в TiniDay',
+            lead: 'TiniDay — спільний щоденник малюка. Приєднуйтеся, щоб разом бачити й записувати день дитини.',
+            step1: 'Встановіть TiniDay з App Store.',
+            step2: 'Відкрийте застосунок і увійдіть або створіть акаунт.',
+            step3: 'Знову натисніть на посилання-запрошення або відкрийте Профіль → «Приєднатися до родини» і вставте код нижче.',
+            install: 'Завантажити в App Store',
+            open: 'TiniDay уже встановлено — відкрити запрошення',
+            codeLabel: 'Код запрошення',
+            noCode: 'У посиланні немає коду запрошення. Попросіть того, хто запросив, надіслати запрошення ще раз.',
+          },
+          es: {
+            title: 'Te han invitado a una familia en TiniDay',
+            lead: 'TiniDay es un diario compartido del bebé. Únete para ver y anotar juntos el día del niño.',
+            step1: 'Instala TiniDay desde el App Store.',
+            step2: 'Ábrela e inicia sesión o crea una cuenta.',
+            step3: 'Vuelve a tocar el enlace de invitación o ve a Perfil → Unirse a una familia y pega el código de abajo.',
+            install: 'Descargar en el App Store',
+            open: 'Ya tengo TiniDay: abrir la invitación',
+            codeLabel: 'Código de invitación',
+            noCode: 'Este enlace no tiene código de invitación. Pide a quien te invitó que te lo envíe de nuevo.',
+          },
+        };
+        var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+        var t = texts[lang];
+        if (t) {
+          document.documentElement.lang = lang;
+          document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var value = t[el.getAttribute('data-i18n')];
+            if (value) el.textContent = value;
+          });
+          document.title = t.title;
+        }
+
+        var match = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i.exec(location.search + location.hash);
+        if (match) {
+          var token = match[0].toLowerCase();
+          document.getElementById('code').textContent = token;
+          document.getElementById('code-block').hidden = false;
+          document.getElementById('open-app').href = 'tiniday://accept-invite?token=' + token;
+        } else {
+          document.getElementById('no-code').hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>

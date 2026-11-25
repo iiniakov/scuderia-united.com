@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TYX3M6TM4D.com.scuderiaunited.tiniday"],
+        "components": [
+          { "/": "/tiniday/invite", "comment": "TiniDay family invites" },
+          { "/": "/tiniday/invite.html", "comment": "TiniDay family invites" }
+        ]
+      }
+    ]
+  }
+}
